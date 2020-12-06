@@ -1,0 +1,13 @@
+	There are two main forms of conditional statements found in real programming languages:
+the conditional operator (if) and the multivalued choice operator (switch, case).
+
+	The conditional operator implements the execution of certain commands, provided that some logical expression (condition) takes the value "true".
+
+	The switch executes one specified branch, depending on the value of the evaluated keyword.
+The fundamental difference between this instruction and the conditional operator is that the expression that determines the choice of the executable branch returns not a boolean,
+but an integer value, or a value whose type can be cast to an integer.
+
+	Boolean data type, or boolean type, a primitive data type in computer science that takes two possible values, true or false (1 or 0). A Boolean data type can be implemented and stored in memory using only one bit,
+but usually the smallest addressable memory location (usually a byte or machine word) is used as a more efficient storage unit when working with processor registers and main memory in terms of performance.
+	
+	?: is a ternary operator that is part of the syntax for basic conditional expressions.  An expression a ? b : c evaluates to b if the value of a is true, and otherwise to c.

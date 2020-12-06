@@ -1,0 +1,67 @@
+//
+#include <iostream>
+using namespace std;
+
+class A
+{
+    private:
+        int x = 2;
+        int y = 3;
+        int newX;
+        int newY;
+    public:
+        A(int x, int y)
+        {
+            this->x = x;
+            this->y = y;
+            changeValue(x, y);
+        }
+        void show()
+        {
+            cout << "x = " << x << "\ny = " << y;
+        }
+        void changeValue(int x, int y)
+        {
+            show();
+            newX = x;
+            newY = y;
+            cout <<"\nx new value = ";
+            cin >> newX;
+            cout << "\ny new value = ";
+            cin >> newY;
+            
+            cout << endl;
+        }
+        int sum()
+        {
+            int sum = 0;
+            sum = newX + newY;
+                return sum;
+        }
+        int compare()
+        {
+            if(newX > newY)
+            {
+                cout << newX <<" is > than " << newY << endl;
+            }
+            else if(newY > newX)
+            {
+                cout << newY <<" is > than " << newX << endl;
+            }
+            else
+                cout << "numbers are equal" << endl;
+        }        
+};
+
+int main()
+{
+    int x;
+    int y;
+    A* m = new A(x, y);
+    
+    cout << "Sum = "<< m->sum()<< endl;
+    m->compare();
+    return 0;
+}
+
+

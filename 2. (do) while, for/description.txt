@@ -1,0 +1,3 @@
+	for is used when the number of iterations is known (there is a variable or constant that determines this number).
+while and do-while are used when the number of iterations is not known in advance.
+while is used when there is a possibility that the loop will never execute, and do-while should be used when it is known that at least one iteration is always required.

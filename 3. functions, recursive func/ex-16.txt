@@ -1,0 +1,24 @@
+//greatest common divisor (GCD) function
+#include <iostream>
+using namespace std;
+
+int gcd(int, int);
+
+int main()
+{
+    int a;
+    int b;
+    cout << "a = "; cin >> a;
+    cout << "b = "; cin >> b;
+    cout << "GCD(" << a << ", " << b << ") = " << gcd(a, b);
+
+    return 0;
+}
+
+int gcd(int x, int y)
+{
+    if(x % y == 0)
+        return y;
+    else
+        return gcd(y, x % y);
+}

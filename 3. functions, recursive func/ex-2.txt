@@ -1,0 +1,30 @@
+//
+#include <iostream>
+using namespace std;
+void side(int x, char ch);
+int main()
+{
+    int n = 0;
+    char m = ' ';
+    cout << "Enter quantity of rows and columns " ;cin >> n;
+    cout << "\n" <<"Enter symbol or digit ";cin >> m;
+    
+    side(n, m);
+    
+    return 0;
+}
+
+void side(int x, char ch)
+{
+    for(int i = 0; i < x; i++)
+    {
+        for(int j = 0; j < x; j++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
+
+

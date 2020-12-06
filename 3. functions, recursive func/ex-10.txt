@@ -1,0 +1,27 @@
+//recursive factorial
+#include <iostream>
+
+using namespace std;
+
+int factorial(int n);
+   
+int main()
+{
+     int a;
+     cin >> a;
+     while(a < 1){
+         cout << "select number over or equal than 1" << endl;
+         cin >> a;
+     }cout << a << "!=" << factorial(a);
+     
+     return 0;
+}
+int factorial(int n)
+{
+    
+    if(n == 1){
+        return 1;
+    }
+    return n * factorial(n - 1);
+} 
+

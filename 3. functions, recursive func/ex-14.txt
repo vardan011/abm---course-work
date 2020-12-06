@@ -1,0 +1,26 @@
+//multipliers
+#include <iostream>
+using namespace std;
+
+void mult(int k);
+
+int main()
+{
+   int n;
+    cout << "n = "; cin >> n;
+    mult(n);
+    return 0;
+}
+ 
+void mult(int k)
+{
+    int i = 2;
+    while (k > 1) {
+        while (!(k % i)) {
+            k /= i;
+            cout << i << " ";
+        }
+        i++;
+    }
+}    
+

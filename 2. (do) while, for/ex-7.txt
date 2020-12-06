@@ -1,0 +1,29 @@
+// integer power calculator
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n, f, p = 1, i = 0;
+    do {
+        cout << "Degree of number = ";
+        cin >> n;
+        if (n > 30 || n <= 0)
+            cout << "Enter the number which bigger than 0 and fewer than 30 " << endl;
+    } while (n > 30 || n <= 0);
+    do {
+        cout << "Number = ";
+        cin >> f;
+        if (f > 30 || f <= 0)
+            cout << " Enter the number which bigger than 0 and fewer than 30" << endl;
+    } while (f > 30 || f <= 0);
+    
+    while (i < n) {
+        ++i;
+        p *= f;
+        cout << f << " ^ " << i << " = " << p << endl;
+    }
+
+    return 0;
+}

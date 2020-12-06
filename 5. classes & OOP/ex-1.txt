@@ -1,0 +1,61 @@
+//differential
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+class Equation
+{
+  private:
+    int a, b, c;
+  public:
+    Equation(int a, int b, int c)
+    {
+      this->a = a;
+      this->b = b;
+      this->c = c;
+    }
+    int getD()
+    {
+      return b * b - 4 * a * c;
+    }
+    
+    string getValues()
+    {
+      string info = "";
+      info += "D: " + to_string(getD());
+      if(getx1() == getx2())
+        info += "\n X 1 and X 2 are equar and value is " + to_string(getx1());
+      else
+        info += "\n X 1: = " + to_string(getx1()) + "\n X 2: = " + to_string(getx2());
+        
+      return info;
+    }
+    
+    int getx1()
+    {
+      int d = getD();
+      if(d == 0)
+        return -b / 2 * a;
+      else return (-b - sqrt(d)) / 2 * a;
+    }
+    int getx2()
+    {
+     int d = getD();
+      if(d == 0)
+        return -b / 2 * a;
+      else return (-b + sqrt(d)) / 2 * a;
+    }
+};
+
+int main()
+{
+    Equation e(12, 7, 1);
+    cout << e.getValues() << endl;
+    
+    Equation e1(1, -4, 4);
+    cout << e1.getValues() << endl;
+    
+    return 0;
+}

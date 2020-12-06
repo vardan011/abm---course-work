@@ -1,0 +1,47 @@
+//
+#include <iostream>
+
+using namespace std;
+
+class Children
+{
+    private:
+        char name[32]; //  поля закрытые по умолчанию
+        char surname[32];
+        int age;
+    public: // открытые поля
+        void fillData();
+        void showData(); 
+};
+ 
+int main()
+{
+    Children FirstChild;
+    Children SecondChild;
+ 
+    cout << "Enter info!\n";
+    FirstChild.fillData();
+    SecondChild.fillData();
+ 
+    FirstChild.showData();
+    SecondChild.showData();
+ 
+    return 0;
+}
+
+void  Children::fillData()
+{
+    cout << "Name: ";
+    cin.getline(name, 32);
+    cout << "Surname: ";
+    cin.getline(surname, 32);
+    cout << "Age: ";
+    cin >> age;
+    cin.get();
+}
+
+void  Children::showData()
+{
+ cout << name << " " << surname << " " << age << " y.o.;\n";
+}
+

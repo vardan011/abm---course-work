@@ -1,0 +1,69 @@
+/*ќбъ€вить три массива. ѕервые два заполнить случайными значени€ми  от 10 до 30.
+¬ элементы третьего массива записать сумму соответствующих элементов первых двух массивов.
+(в нулевую €чейку третьего Ц сумму нулевых €чеек первого и второго массивов и так далее).
+«атем найти среднее арифметическое элементов третьего массива, максимальное значение и минимальное значение, которые он хранит.*/
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+    const int SIZE = 10;
+    int arr1[SIZE];
+    int arr2[SIZE];
+    int arr3[SIZE];
+    
+    int avg = 0;
+    int max = arr3[0];
+    int min;
+    
+    
+    srand(time(NULL));
+    cout << "arr1 elements = ";
+    for(int i = 0; i < SIZE; i++)
+    {
+        arr1[i] = 10 + rand() % 21;
+        cout << arr1[i] << " ";
+        
+    }
+    
+    cout << endl;
+    
+    cout << "arr2 elements = ";
+    for(int i = 0; i < SIZE; i++)
+    {
+        arr2[i] = 10 + rand() % 21;
+        cout << arr2[i] << " ";
+        
+    }
+    
+    cout << endl;
+    
+    cout << "arr3 elements = ";
+    for(int i = 0; i < SIZE; i++)
+    {
+        arr3[i] = arr1[i] + arr2[i];
+        cout << arr3[i] << " ";
+    }
+    
+    for(int i = 0; i < SIZE; i++)
+    {
+        avg += arr3[i]; 
+        
+        if(arr3[i] > max)
+        {
+            max = arr3[i];
+        }    
+        if(arr3[i] < min)
+        {
+            min = arr3[i];
+        }
+    }
+    cout << endl;
+    cout << "3rd arrays elements average = " << avg / SIZE << endl;
+    cout << "3rd arrays Max element is = " << max << endl;
+    cout << "3rd arrays Min element is = " << min;
+    return 0;
+}
+

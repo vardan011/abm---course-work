@@ -1,0 +1,26 @@
+//quantity of positive numbers
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b, c, d, i = 0;
+    
+    cout << "a = "; cin >> a;
+    cout << "b = "; cin >> b;
+    cout << "c = "; cin >> c;
+    cout << "d = "; cin >> d;
+   
+    if (a > 0) i++;
+    if (b > 0) i++;
+    if (c > 0) i++;
+    if (d > 0) i++;
+    
+    if (i) cout << "Количество положительных чисел равно " << i << endl;
+    
+    if (!i) cout << "Положительных чисел - нет!" << endl;
+    
+    return 0;
+}
+

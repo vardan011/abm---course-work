@@ -1,0 +1,20 @@
+//comparing of 2 numbers
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b;
+    cout << "a = "; cin >> a;
+    cout << "b = "; cin >> b;
+    cout << (a > b ? "A bigger than B" : "B bigger than A") << endl;
+    a % b == 0 ? cout << "A multiple of B" << endl : cout << "A not multiple of B" << endl;
+    b % a == 0 ? cout << "B multiple of A" << endl : cout << "B not multiple of A" << endl;
+    
+    cout << "Numbers are have" << (a * b > 0 ? " same signs." : " different signs.");
+    cout << endl;
+ 
+    return 0;
+}
+

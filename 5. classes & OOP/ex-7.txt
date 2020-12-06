@@ -1,0 +1,105 @@
+#include <iostream>
+using namespace std;
+
+class Player
+{
+    private:
+        string firstName;
+        string lastName;
+    public:
+  
+        Player() {}
+    
+        Player(string firstName, string lastName)
+        {
+            this->firstName = firstName;
+            this->lastName = lastName;
+        }
+  
+        string getFirstName()
+        {
+            return firstName;
+        }
+    
+        string getLastName()
+        {
+            return lastName;
+        }
+  
+        Player& operator=(const Player* p)
+        {
+            this->firstName = p->firstName;
+            this->lastName = p->lastName;
+        
+        return *this;
+        }
+};
+
+class Team
+{
+    private:
+        string _name;
+        Player* _players;
+        static int membersCount;
+        int _size;
+        
+    public:
+        Team(string name, int size)
+        {
+            _name = name;
+            _players = new Player[size];
+            _size = size;
+        }
+        
+        bool AddTeamMember(Player* player)
+        {
+            if(membersCount < _size)
+            {
+                _players[membersCount] = player;
+                membersCount++;
+                return true;
+            }
+            else
+                return false;
+        }
+        
+        void print()
+        {
+            for(int i = 0; i< _size; i++)
+            {
+                cout<< "Fist Name: "<< _players[i].getFirstName()<<"\nLast Name: "<< _players[i].getLastName()<<endl;
+            }
+        }
+        
+        string getName()
+        {
+            return _name;
+        }
+};
+
+int Team::membersCount = 0;
+
+int main ()
+{
+    string name;
+    cout<<"Please enter favourite team name"<<endl;
+    cin>>name;
+    int size;
+    cout<<"Please enter team members count"<<endl;
+    cin>>size;
+    Team* team = new Team(name, size);
+    
+    for(int i=0; i<size; i++)
+    {
+        string firstName, lastName;
+        cout << "Enter players first name: "; cin >> firstName;
+        cout <<"\nEnter players last name: "; cin >> lastName;
+        Player* pl1 = new Player(firstName, lastName);
+        team->AddTeamMember(pl1);
+    }
+    team->print();
+
+  return 0;
+}
+
+

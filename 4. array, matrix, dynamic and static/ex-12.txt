@@ -1,0 +1,39 @@
+//поиск минимального значения в массиве и его индекса.
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int rrand(int range_min, int range_max) {
+    return rand() % (range_max - range_min + 1) + range_min;
+    }
+
+    const unsigned int ARRSIZE = 10;
+    const int ABSLIMIT = 100;
+
+    int ary[ARRSIZE];
+
+int main(void) {
+
+    srand(static_cast<unsigned int>(time(NULL)));
+
+    for (unsigned int i = 0; i < ARRSIZE; i++) {
+        ary[i] = rrand(-ABSLIMIT, ABSLIMIT);
+    }
+
+    for (unsigned int i = 0; i < ARRSIZE; i++) {
+        cout << "Значение элемента массива [" << i << "] = " << ary[i] << endl;
+    }
+
+    int min_val = ary[0];
+    unsigned int min_idx = 0;
+    for (unsigned int i = 1; i < ARRSIZE; i++) {
+        if (min_val > ary[i]) {
+            min_val = ary[i];
+            min_idx = i;
+        }
+    }
+    cout << "Минимальное значение " << min_val << ", индекс элемента " << min_idx << endl;
+
+    return 0;
+}

@@ -1,0 +1,46 @@
+//
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+class calendar
+{
+private:
+    int day;
+    int month;
+    int year;
+public:
+
+    calendar(int day, int month, int year)
+    {
+        this->day = day;
+        this->month = month;
+        this->year = year;
+    }
+
+    void getDate()
+    {
+        cout << "Date : " << day << "/" << month << "/" << year << endl;
+    }
+};
+
+int main()
+{
+    int day;
+    int month;
+    int year;
+
+    cout << "Enter current day, month and year \n";
+    cout << "Enter day :"; cin >> day;
+    cout << "Enter month :"; cin >> month;
+    cout << "Enter year :"; cin >> year;
+
+    calendar* engine = new calendar(day, month, year);
+
+    engine->getDate();
+
+    return 0;
+}
+
+

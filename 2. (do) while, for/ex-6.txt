@@ -1,0 +1,28 @@
+//tringle with "*"
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+  int n = 0;
+  cin >> n;
+  int k = 1;
+  for (int i = n; i > 0; i--)
+    {
+      for (int j = 0; j < i; j++)
+	{
+	  cout << " ";
+	}
+      for (int j = 0; j < k; j++)
+	{
+	  cout << "*";
+	}
+      k += 2;
+      cout << endl;
+    }
+  cout << endl;
+
+  return 0;
+}
+
+

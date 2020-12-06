@@ -1,0 +1,24 @@
+//
+#include <iostream>
+using namespace std;
+
+class MyClass
+{
+    private:
+        int var;
+    public:
+        int sum(int x, int y)
+        {
+            var = x + y;
+            return var;
+        }
+};
+
+int main()
+{
+    MyClass a;
+    cout << a.sum(8, 6);
+
+    return 0;
+}
+

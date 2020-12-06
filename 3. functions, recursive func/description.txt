@@ -1,0 +1,4 @@
+	A recursive function is a function that calls itself. This is in the case of direct recursion.
+ There is also indirect recursion - when two or more functions call each other. When a function calls itself,
+a copy of its parameter values is created on the stack, after which control is transferred to the first executable function statement.
+ When called again, the process is repeated. Recursive functions are an alternative to loops.

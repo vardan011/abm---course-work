@@ -1,0 +1,34 @@
+//status of number
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "n = ";
+    cin >> n;
+    if(n == 0)
+    {
+        cout << "zero number";
+    }
+    else if(n < 0 && n % 2 == 0)
+    {
+        cout << "negative even number";
+    }
+    else if(n > 0 && n % 2 == 0)
+    {
+        cout << "positive even number";
+    }
+    else if(n < 0 && n % 2 != 0)
+    {
+        cout << "negative odd number";
+    }
+    else if(n > 0 && n % 2 != 0)
+    {
+        cout << "positive odd number";
+    }
+
+    return 0;
+}
+

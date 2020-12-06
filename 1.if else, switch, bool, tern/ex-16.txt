@@ -1,0 +1,27 @@
+//3 number calc
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+      int a, b, c;
+ 
+    cout << "a = "; cin >> a;
+    cout << "b = "; cin >> b;
+    cout << "c = "; cin >> c;
+ 
+ 
+    if (a > b)
+        if (b > c)
+            cout << a + b << endl;
+        else
+            cout << a + c << endl;
+    else
+        if (a > c)
+            cout << a + b << endl;
+        else
+            cout << b + c << endl;
+    return 0;
+}
+

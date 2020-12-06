@@ -1,0 +1,30 @@
+//calculating with numbers
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double a, b;
+    cout << "a = "; cin >> a;
+    cout << "b = "; cin >> b;
+    if (a > b) 
+    {
+        a = pow(a, 3);
+        b = pow(b, 4);
+        cout << "a = " << a << "\n" << "b = " << b << endl;
+    }
+    else if(b > a)
+    {
+        a = pow(a, 4);
+        b = pow(b, 3);
+        cout << "a = " << a << "\n" << "b = " << b << endl;
+    }
+    else
+    {
+        cout << "numbers are equal " << endl;
+    }
+    
+
+    return 0;
+}

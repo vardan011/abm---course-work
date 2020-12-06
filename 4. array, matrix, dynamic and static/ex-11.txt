@@ -1,0 +1,55 @@
+/*Заполнить двумерный массив случайными  числами от 10  до 100.
+Посчитать сумму элементов отдельно в каждой строке и определить номер строки,  в которой эта сумма максимальна.*/
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+    const int matSize = 7;
+    
+    int ourMatrix[matSize][matSize] = {};
+    int rowSum[matSize] = {};
+    int numMaxRow = 0; 
+    
+    srand(time(NULL));
+    for(int i = 0; i < matSize; i++)
+    {
+        cout << " | ";
+        for(int j = 0; j < matSize; j++)
+        {
+            ourMatrix[i][j] = 10 + rand() % 91;
+            cout << "  " << ourMatrix[i][j];
+        }
+        cout << "  |  ";
+    }
+
+    for(int i = 0; i < matSize; i++)
+    {
+        for(int j = 0; j < matSize; j++)
+        {
+            rowSum[i] += ourMatrix[i][j];
+        }
+    }
+    
+    cout << "\nСумма по строкам!\n";
+    
+    for(int i = 0; i < matSize; i++)
+    {
+        cout << i + 1 << "-я строка: " << rowSum[i] << endl;
+    }
+    
+    for (int i = 1; i < matSize; i++)
+    {
+        if (rowSum[i] > rowSum[numMaxRow])
+        {
+            numMaxRow = i;
+        } 
+    }
+ 
+    cout << "Строка, сумма элементов которой максимальна: " << numMaxRow + 1;
+    
+    return 0;
+}
+

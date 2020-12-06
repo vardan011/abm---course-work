@@ -1,0 +1,37 @@
+//salary diapason
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int sum;
+    int n;
+    int cashier;
+    int arr[cashier];
+    cout << "Cashiers quantity" << endl;
+    cin >> cashier;
+    cout << endl <<"trade price " << endl;
+    cin >> n;
+    
+    for(int i = 1; i <= cashier; i++)
+    {
+        cout << "N " << i << " cashiers salary "<< "\t";
+        sum = 200+((n*9)/100);
+        //cout << sum << endl;
+        if(sum <= 1000)
+        {
+        cout << "$" << sum - 50 << "-" 
+        << "$" << sum + 50 << endl;
+        }else cout << " 1000 - or more" << endl;
+        
+        cout << "trade price " << "\t" ;
+        cin >> n;
+    }
+    
+
+    return 0;
+}
+
+
+
+

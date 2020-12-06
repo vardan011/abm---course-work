@@ -1,0 +1,16 @@
+//max n = 20!
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    unsigned long n;
+    int i, k;
+    cout << "k = "; cin >> k; 
+    for(n = 1, i = 1; i <= k; n *= i, ++i);
+    cout << k << "! = " << n << endl;
+
+    return 0;
+}
+

@@ -1,0 +1,29 @@
+//fibonacci
+#include <iostream>
+
+using namespace std;
+
+int fibonacci(int index){
+    if (index == 0 || index == 1)
+        return index;
+    
+    int m = 0;
+    int n = 1;
+    for(int i = 2; i <= index; i++){
+        int f = n;
+        n += m;
+        m = f;
+    }
+    return n;
+}
+int main()
+{
+    int x = 0;
+    cin >> x;
+    cout << fibonacci(x) << endl;
+
+    return 0;
+}
+
+
+

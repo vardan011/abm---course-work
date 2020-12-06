@@ -1,0 +1,35 @@
+//name alphabet sorting
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "<< Enter length: ";
+        int length; cin >> length;
+ 
+        string* names = new string[length];
+        for (int index = 0; index < length; index++)
+        {
+            cout << "<< Enter name #" << index + 1 << ": ";
+            cin >> names[index];
+        }
+ 
+        for (int iteration = 0; iteration < length - 1; iteration++)
+        {
+            for (int index = 0; index < length - iteration - 1; index++)
+            {
+                int next = index + 1;
+                if (names[index] > names[next])
+                    swap(names[index], names[next]);
+            }
+        }
+ 
+        for (int index = 0; index < length; index++)
+            cout << ">> Name #" << index + 1 << ": " << names[index] << "\n";
+ 
+        delete[] names;
+
+    return 0;
+}
+
+

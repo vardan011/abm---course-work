@@ -1,0 +1,24 @@
+//
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double x, y;
+    cout << "x = "; cin >> x;
+    cout << "y = "; cin >> y;
+    cout << "point is ";
+    if (x > 0 && y > 0)
+        cout << "in I quarter.";
+    else if (x > 0 && y < 0)
+        cout << "in IV quarter.";
+    else if (x < 0 && y > 0)
+        cout << "in II quarter.";
+    else
+        cout << "in III quarter.";
+    cout << endl;
+
+    return 0;
+}
+

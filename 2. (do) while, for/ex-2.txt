@@ -1,0 +1,38 @@
+//банковское дело
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int accn;
+    float stb, ras, pr, lim, bal;
+    while(accn != -1){
+        cout<<"Введите номер счета (-1, если ввод закончен)"; cin>>accn;
+        if(accn==-1){
+            break;
+        }
+        cout<<"Введите начальный баланс:\t"; cin>>stb; cout<<endl;
+        
+        cout<<"Введите сумму расходов:\t"; cin>>ras; cout<<endl;
+        
+        cout<<"Введите сумму прихода:\t"; cin>>pr; cout<<endl;
+            bal = stb+ras-pr;
+        cout<<"Введите предел хредита:\t"; cin>>lim; cout<<endl;
+            
+            cout<<"Счет:"<<accn<<endl;
+            cout<<"Предел кредита:"<<lim<<endl;
+            cout<<"Баланс:"<<bal<<endl;
+        if(bal>lim)
+            cout<<"Предел кредита превышен"<<endl;
+          
+    }  
+
+    return 0;
+}
+
+
+
+
+
+
+

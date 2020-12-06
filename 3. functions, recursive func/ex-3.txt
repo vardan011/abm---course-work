@@ -1,0 +1,22 @@
+//sum of even numbers
+#include <iostream>
+using namespace std;
+
+int evenSum(int n);
+
+int main()
+{
+    int x = evenSum(15);
+    cout << x;
+
+    return 0;
+}
+int evenSum(int n)
+{
+    int sum = 0;
+    for(int i = 0; i < n; i += 2)
+    {
+        sum += i;
+    }
+    return sum;
+}

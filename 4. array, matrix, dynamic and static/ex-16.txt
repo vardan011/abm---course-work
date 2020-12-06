@@ -1,0 +1,19 @@
+//just few times enter something
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    char ch;
+    int i = 0;
+    while((ch = cin.get()) != '.')
+    {
+        i++;
+        cout << setw(i) << ch << endl;
+    }
+
+    return 0;
+}
+
+

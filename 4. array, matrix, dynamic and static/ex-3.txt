@@ -1,0 +1,27 @@
+//find max number
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int B[30];
+    int index = 0;
+    int max;
+    
+    max = B[0]; 
+    for (int i = 0; i < 30; i++)
+    {
+        B[i] = rand() % 120;
+        if (max < B[i]) 
+        { 
+            max = B[i];
+            index = i;
+        }
+    }    
+        
+    cout << B[index];  
+
+    return 0;
+}
+
+

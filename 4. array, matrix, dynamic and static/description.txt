@@ -1,0 +1,5 @@
+	We already know that a variable is a cell in the computer's memory where one single value can be stored.
+ An array is an area of memory where multiple values can be stored sequentially.
+	When creating a static array, only a constant can be used to specify its size.
+ The size of the allocated memory is determined at compile time and cannot be changed at runtime.
+ If there is a need to create a variable, the size of which is unknown in advance, then dynamic memory is used. It's the same in this case.

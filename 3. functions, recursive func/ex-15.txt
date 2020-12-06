@@ -1,0 +1,22 @@
+//divid function
+#include <iostream>
+using namespace std;
+
+void divid(int k);
+
+int main()
+{
+    int n;
+    cout << "n = "; cin >> n;
+    divid(n);
+
+    return 0;
+}
+void divid(int k)
+{
+    for(int i = 2; i <= k; i++)
+    {
+        if(k % i == 0)
+            cout << i << endl;
+    }
+}

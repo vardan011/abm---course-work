@@ -1,0 +1,29 @@
+//square root
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    float a, b;
+ 
+    cout << "a = "; cin >> a;
+    cout << "b = "; cin >> b;
+ 
+    if (a > b)
+    {
+        a = (a + b) / 2;
+        b = sqrtf(a * b);
+    }
+    else 
+    {
+        a = sqrtf(a * b);
+        b = (a + b) / 2;
+    }
+ 
+    cout << "a = " << a << endl
+         << "b = " << b << endl;
+
+    return 0;
+}
+

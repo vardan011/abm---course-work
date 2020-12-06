@@ -1,0 +1,17 @@
+//abs calculator
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    
+    int n;
+    cout << "n = "; cin >> n;
+    if (n < 0) 
+        n = abs(n);
+    cout << "|n| = " << n << endl;  
+
+    return 0;
+}
+

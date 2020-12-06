@@ -1,0 +1,25 @@
+//number multiple
+#include <iostream>
+
+using namespace std;
+
+int multiple(int number, int n)
+{
+    int x=1;
+    for(int i=0; i<n; i++){
+        x*=number;
+    }
+    return x;
+}    
+int main()
+{
+    int a, b;
+    cin >> a >> b;
+    cout <<  multiple(a, b) << endl;
+
+    return 0;
+}
+
+
+
+

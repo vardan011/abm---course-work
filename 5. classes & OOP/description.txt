@@ -1,0 +1,14 @@
+	OOP is based on the concepts of "object" and "class". In a programming language, an object is a variable of type "class".
+ The class describes the data and methods (functions) that will be used by an object of this class.
+ Each class describes a logically complete unit of the program.
+
+	Abstraction - to highlight in the simulated subject that is important for solving a specific problem on the subject,
+ultimately - the contextual understanding of the subject, formalized in the form of a class.
+
+	Encapsulation - for fast and safe organization of proper hierarchical manageability: so that a simple “what to do” command is sufficient,
+without simultaneously specifying how to do it, since this is already another level of management;
+
+	Inheritance - for quick and safe organization of related concepts: so that it would be enough to take into account only changes at each hierarchical step,
+without duplicating everything else taken into account in the previous steps;
+
+	polymorphism - to determine the point at which it is better to parallelize a single control, or vice versa - to collect together.

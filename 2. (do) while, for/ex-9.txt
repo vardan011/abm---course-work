@@ -1,0 +1,19 @@
+//calculation with 5 digit numbers
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x = 100000;
+    for(int i = 10000; i < x; i++)
+    {
+        if(i % 133 == 125 && i % 134 == 111)
+        {
+            cout << i << endl;
+        }
+    }
+
+    return 0;
+}
+

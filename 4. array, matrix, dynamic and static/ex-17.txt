@@ -1,0 +1,17 @@
+//print to 1-st space
+#include <iostream>
+#include <iomanip>
+using namespace std;
+ 
+int main()
+{
+    const int buf = 80;
+    char myStr[buf];
+    cout << "Введите строку: ";
+    cin >> setw(buf) >> myStr;
+    cout << "Вы ввели строку:\n"
+         << myStr
+         << endl;
+    return 0;     
+}
+
